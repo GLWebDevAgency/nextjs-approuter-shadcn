@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js + shadcn/ui Starter
+
+A modern starter template using Next.js 16 with the App Router and shadcn/ui components.
+
+## Tech Stack
+
+- **Next.js 16** - React framework with App Router
+- **React 19** - Latest React with new features
+- **TypeScript 5.9** - Type-safe development
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **shadcn/ui** - Re-usable UI components (New York style)
+- **Radix UI** - Accessible component primitives
+- **Lucide React** - Icon library
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+app/
+  layout.tsx    # Root layout
+  page.tsx      # Home page
+  globals.css   # Global styles + Tailwind
+lib/
+  utils.ts      # Utility functions (cn helper)
+```
 
-## Learn More
+## Adding shadcn/ui Components
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx shadcn@latest add button
+npx shadcn@latest add card
+# etc.
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
